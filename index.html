@@ -63,7 +63,7 @@ img{max-width:100%;display:block}
 .hero{
   padding:2rem 1rem 0;
 }
-#Vorwort{margin-top:1.25rem}
+#Vorwort{margin-top:2.5rem}
 .hero-panel{
   max-width:var(--panel-w);
   margin:0 auto;
@@ -74,7 +74,7 @@ img{max-width:100%;display:block}
   box-shadow:0 4px 40px rgba(0,0,0,.45);
 }
 .hero-nav{
-  display:flex;gap:2.2rem;flex-wrap:wrap;justify-content:center;
+  display:flex;gap:3.6rem;flex-wrap:wrap;justify-content:center;
   margin-bottom:3.5rem;
 }
 .hero-nav a{
@@ -185,8 +185,20 @@ em{font-style:italic}
 .btn:hover{background:#751a27}
 
 /* ---------- Lange Beiträge ---------- */
-.contrib{border-top:1px solid rgba(42,37,29,.2);padding-top:2.6rem;margin-top:2.6rem}
-.contrib:first-of-type{border-top:none;padding-top:0;margin-top:0}
+#Beitraege{
+  padding-left:clamp(1.5rem,4vw,3.5rem);
+  padding-right:clamp(1.5rem,4vw,3.5rem);
+}
+.contrib-cols{
+  display:grid;
+  grid-template-columns:1fr 1fr;
+  gap:2.6rem 3.5rem;
+  align-items:start;
+}
+@media (max-width:760px){
+  .contrib-cols{grid-template-columns:1fr}
+  .contrib + .contrib{border-top:1px solid rgba(42,37,29,.2);padding-top:2.6rem}
+}
 .contrib .who{
   font-size:.92rem;letter-spacing:.2em;text-transform:uppercase;
   color:var(--muted);margin-bottom:1rem;
@@ -294,6 +306,7 @@ em{font-style:italic}
 <section id="Beitraege" class="panel">
   <p class="label">Weitere, längere Beiträge</p>
 
+  <div class="contrib-cols">
   <article class="contrib">
     <p class="who">Dr. Fritz Rigendinger, Leiter Kultur des Kantons Glarus</p>
     <p>«Für die europäische Kultur- und Wirtschaftsgeschichte ist die Überlieferung von 130 Jahren Firmenarchiv und die jetzt vorliegende Geschichte des Glarner Exporthandels ein einzigartiger Glücksfall. Eine Überlieferungssituation, wie sie sonst nur in geistlichen Archiven anzutreffen ist.</p>
@@ -308,6 +321,7 @@ em{font-style:italic}
     <p>Wer sich heute eingehend mit den Themen der Schweizerischen Wirtschaftsgeschichte des 19. Jahrhunderts beschäftigt, dem wird eine umfangreiche Dokumentation an die Hand gegeben. Sie enthält Transkriptionen aus einer riesigen Korrespondenz von 1798 bis 1927 des Handelshauses und Tuchdruckmanufaktur Streiff und Luchsinger in der «Insel» in Glarus und dessen Vertretungen in Norditalien, in den Donauländern und in Provinzen des Osmanischen Reichs. Die Briefe entstammen direkt der Feder ihrer Associés mehrerer Generationen und zahlreichen Geschäftspartnern und gewähren einen authentischen Einblick in die von unterschiedlichen Persönlichkeiten geprägte Firmengeschichte. Den historischen Kontext beleuchtet die aus der Fabrikantenfamilie entstammende Autorin durch die Zeit der Industriellen Revolution, den turbulenten politischen Wandel der europäischen Nationalstaaten und im Speziellen durch die damit verbundene teils riskante Erschliessung von neuen vielversprechenden Absatzmärkten in entfernteren Gebieten Osteuropas und des Orients.</p>
     <p>Das Werk bildet einen enormen Fundus und eine einzigartige Enzyklopädie zur Geschichte des Glarner Zeugdrucks und des Exporthandels für Wissenschaft und Interessierte, mit direktem Verweis auf die im Glarner Wirtschaftsarchiv Schwanden aufbewahrten Originaldokumente.»</p>
   </article>
+  </div>
 </section>
 
 <footer class="panel footer-panel">
