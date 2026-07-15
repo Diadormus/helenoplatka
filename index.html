@@ -326,7 +326,15 @@ em{font-style:italic}
 
 <footer class="panel footer-panel">
   <p class="title">130 Jahre Glarner Exporthandel</p>
-  <p><a href="mailto:helen@oplatka.ch">helen@oplatka.ch</a></p>
+  <p><a id="mail" href="#" aria-label="E-Mail an die Autorin">helen [ät] oplatka [punkt] ch</a></p>
+  <script>
+    (function () {
+      var user = "helen", domain = "oplatka" + "." + "ch";
+      var a = document.getElementById("mail");
+      a.textContent = user + "@" + domain;
+      a.href = "mailto:" + user + "@" + domain;
+    })();
+  </script>
   <p class="fine">© Helen Oplatka-Steinlin</p>
 </footer>
 <div class="tail" aria-hidden="true"></div>
